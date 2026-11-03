@@ -7,7 +7,7 @@ import time
 from pathlib import Path
 from collections import defaultdict, deque
 
-from aiogram import Bot, Dispatçer, F
+from aiogram import Bot, Dispatcher, F
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 from aiogram.filters import CommandStart, Command
@@ -29,7 +29,7 @@ logging.basicConfig(
 log = logging.getLogger("uzbek-alpha-bot")
 
 bot = Bot(TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
-dp = Dispatçer()
+dp = Dispatcher()
 
 USER_MODE = defaultdict(lambda: "auto")
 USER_RATE = defaultdict(deque)
